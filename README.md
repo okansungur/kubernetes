@@ -6,7 +6,8 @@ It consist of layers. Think the operating system as a lightweight OS. Not all th
 
 
 
-ClusterIP : Default type Service is accessible from inside the cluster only.
-NodePort : Service is accessible from outside the cluster. The default port ranges (30000–32767).
-LoadBalancer : In addition to NodePort, it will also create an external load balance. 
-ExternalName : Service is redirected to an external DNS name, by a DNS CNAME record.
+- ClusterIP : Default type Service is accessible from inside the cluster only.
+- NodePort : Service is accessible from outside the cluster. The default port ranges (30000–32767).
+- LoadBalancer : In addition to NodePort, it will also create an external load balance. 
+- ExternalName : Service is redirected to an external DNS name, by a DNS CNAME record.
+
