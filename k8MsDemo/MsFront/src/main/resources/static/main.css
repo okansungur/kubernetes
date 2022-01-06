@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+    background-color: #FFF;
+    font-size: 130%;
+    font-family: calluna, Calluna, Georgia;
+    font-weight: 300;
+    line-height: 1.55em;
+    padding: 0 2em;
+    text-rendering: optimizeLegibility;
+    color: #555;
+}
+
+ h4, h5, h6 {
+    color: #333;
+    font-family: adelle, Adelle, Georgia;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+}
+
+h6 {
+    font-size: 120%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    color: blue;
+}
+
+h5 {
+    font-size: 150%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    color: #ff4a2f;
+}
+
+h4 {
+    font-size: 130%;
+    margin-top: 3.25em;
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    color: #3bff38;
+}
+
+
