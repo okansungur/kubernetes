@@ -1,9 +1,11 @@
 package com.example.mslecture.controller;
 
 
+import brave.sampler.Sampler;
 import com.example.mslecture.entity.Student;
 import com.example.mslecture.service.LectureService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,7 +42,10 @@ public class LectureController {
         return myStudent;
     }
 
-
+    @Bean
+    public Sampler defaultSampler() {
+        return Sampler.ALWAYS_SAMPLE;
+    }
 
 
 }

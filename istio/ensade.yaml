@@ -1,0 +1,151 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msfront
+  namespace: default
+  labels:
+    app: msfront
+    app.kubernetes.io/name: msfront
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msfront
+
+  template:
+    metadata:
+      labels:
+        app: msfront
+        version: v1
+    spec:
+      containers:
+      - name: msfront
+        image: greenredblue/msfront:v1
+        imagePullPolicy: "Always"
+        
+          
+            
+     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: msfront
+  labels:
+    run: msfront
+    app.kubernetes.io/name: msfront
+spec:
+  type: LoadBalancer
+  selector:
+    app: msfront
+  ports:
+  - name: http
+    protocol: TCP
+    port: 9540
+    targetPort: 9540
+
+---
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mslecture
+  namespace: default
+  labels:
+    app: mslecture
+    app.kubernetes.io/name: mslecture
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mslecture
+
+  template:
+    metadata:
+      labels:
+        app: mslecture
+        version: v1
+    spec:
+      containers:
+      - name: mslecture
+        image: greenredblue/mslecture:v1
+        imagePullPolicy: "Always"
+        
+          
+            
+     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mslecture
+  labels:
+    run: mslecture
+    app.kubernetes.io/name: mslecture
+spec:
+  type: LoadBalancer
+  selector:
+    app: mslecture
+  ports:
+  - name: http
+    protocol: TCP
+    port: 9542
+    targetPort: 9542
+    
+    
+    
+
+  
+    
+---
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msstudent
+  namespace: default
+  labels:
+    app: msstudent
+    app.kubernetes.io/name: msstudent
+    
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msstudent
+      
+
+  template:
+    metadata:
+      labels:
+        app: msstudent
+        version: v1
+    spec:
+      containers:
+      - name: msstudent
+        image: greenredblue/msstudent:v1
+        imagePullPolicy: "Always"
+        
+     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: msstudent
+  labels:
+    run: msstudent
+    app.kubernetes.io/name: msstudent
+spec:
+  type: LoadBalancer
+  selector:
+    app: msstudent
+  ports:
+  - name: http
+    protocol: TCP
+    port: 9541
+    targetPort: 9541
+    
+    
+---
