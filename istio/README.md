@@ -1,5 +1,29 @@
 # Kubernetes
 
+<p align="center">
+  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/zipkin.png">
+</p>
+<p align="center">
+  Zipkin
+</p>
+
+<p align="center">
+  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/istio.png">
+</p>
+<p align="center">
+  Kiali
+</p>
+
+<p align="center">
+  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/jaeger.png">
+</p>
+<p align="center">
+  Jaeger
+</p>
+
+
+
+
 istioctl install --set profile=demo -y \
 kubectl label namespace default istio-injection=enabled 
 
@@ -20,26 +44,3 @@ http://192.168.0.26
 kubectl port-forward service/kiali 20001:20001 -n istio-system \
 kubectl port-forward service/prometheus 9090:9090 -n istio-system \
 kubectl port-forward service/grafana 3000:3000 -n istio-system 
-
-
-<p align="center">
-  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/istio.png">
-</p>
-<p align="center">
-  Kiali
-</p>
-
-<p align="center">
-  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/jaeger.png">
-</p>
-<p align="center">
-  Jaeger
-</p>
-
-
-<p align="center">
-  <img  src="https://github.com/okansungur/kubernetes/blob/main/istio/zipkin.png">
-</p>
-<p align="center">
-  Zipkin
-</p>
