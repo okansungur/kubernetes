@@ -12,6 +12,7 @@ https://okansungur.medium.com/quick-start-kubernetes-k8s-with-docker-desktop-9c4
 
 ###### Kubernetes deployment strategies
 - Recreate
-- Rolling update
-- Blue/Green
-- Canary
+- Rolling update (with zero downtime)
+- Blue/Green (two versions of the deployment running Green is the new one)
+- Canary (90% Blue & 10% Green)
+-
